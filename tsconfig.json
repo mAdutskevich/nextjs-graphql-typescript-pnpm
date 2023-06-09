@@ -1,0 +1,44 @@
+{
+    "include": [
+        "next-env.d.ts",
+        "*/*.tsx",
+        "*/*.ts",
+        "**/*.ts",
+        "**/*.tsx",
+        ".eslintrc.js",
+        ".next/types/**/*.ts"
+    ],
+    "exclude": ["node_modules"],
+    "compilerOptions": {
+        "plugins": [
+            {
+                "name": "next"
+            }
+        ],
+        "paths": {
+            "@/*": ["./src/*"]
+        },
+        "types": ["node"], // If types is specified, only packages listed will be included in the global scope.
+        "target": "es5", // The target setting changes which JS features are downleveled and which are left intact. For example, an arrow function () => this will be turned into an equivalent function expression if target is ES5 or lower.
+        "lib": ["dom", "dom.iterable", "esnext"],
+        "allowSyntheticDefaultImports": true, // default is true - can be removed. When set to true, allowSyntheticDefaultImports allows you to write an import like: import React from "react";
+        "allowJs": true, // Allow JavaScript files to be imported inside your project, instead of just .ts and .tsx files.
+        "checkJs": true, // Works in tandem with allowJs. When checkJs is enabled then typescript errors are reported in JavaScript files.
+        "strict": true, // The strict flag enables a wide range of type checking behavior that results in stronger guarantees of program correctness.
+        "forceConsistentCasingInFileNames": true, // When this option is set, TypeScript will issue an error if a program tries to include a file by a casing different from the casing on disk.
+        "declaration": false, // Generate .d.ts files for every TypeScript or JavaScript file inside your project. These .d.ts files are type definition files which describe the external API of your module. With .d.ts files, tools like TypeScript can provide intellisense and accurate types for un-typed code.
+        "noEmit": true, // Do not emit compiler output files like JavaScript source code, source-maps or declarations.
+        "noImplicitAny": true, // TypeScript will fall back to a type of any for a variable when it cannot infer the type.
+        "esModuleInterop": true, // Fixes import problems
+        "module": "esnext", // module system: CommonJS/UMD/AMD/System/ESNext
+        "moduleResolution": "node", // Specify the module resolution strategy: node/node16/nodenext(for ts>4.7)
+        "resolveJsonModule": true, // Allows importing modules with a ‘.json’ extension
+        "isolatedModules": true,
+        "jsx": "preserve", // Controls how JSX constructs are emitted in JavaScript files. This only affects output of JS files that started in .tsx files. 'preserve' emits .jsx files with the JSX unchanged
+        "skipLibCheck": true, // Skip type checking of declaration files.
+        "incremental": true, // Tells TypeScript to save information about the project graph from the last compilation to files stored on disk.
+        "removeComments": true, // Remove all comments from TypeScript files when converting into JavaScript.
+        "noFallthroughCasesInSwitch": true, // Ensures that any non-empty case inside a switch statement includes either break, return, or throw.
+        "sourceMap": true // Enables the generation of sourcemap files. These files allow debuggers and other tools to display the original TypeScript source code when actually working with the emitted JavaScript files.
+    }
+}

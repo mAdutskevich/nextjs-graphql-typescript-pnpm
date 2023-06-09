@@ -1,0 +1,31 @@
+/* Fonts can be added in at least 3 different ways: 
+1) via global.css */
+
+@font-face {
+    font-family: 'Roboto';
+    /* src: url('../themes/fonts/Roboto400.woff2') format('woff2'),
+        url('../themes/fonts/Roboto400.woff2') format('woff'); */
+    src: url('/fonts/Roboto400.woff2') format('woff2'),
+        url('/fonts/Roboto400.woff2') format('woff');
+    font-style: normal;
+    font-weight: 400;
+    /* font-display: swap; shows the text with default font first and then replaces it with loaded font */
+    /* font-display: swap; */
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    /* src: url('../themes/fonts/Roboto700.woff2') format('woff2'),
+        url('../themes/fonts/Roboto700.woff') format('woff'); */
+    src: url('/fonts/Roboto700.woff2') format('woff2'),
+        url('/fonts/Roboto700.woff2') format('woff');
+    font-style: normal;
+    font-weight: 700;
+    /* font-display: swap; shows the text with default font first and then replaces it with loaded font */
+    /* font-display: swap; */
+    /* font-display: fallback; show firstly invisible text for ~100ms, 
+    then if the required font wasn't loaded shows the default font,
+    and in when the custom font loaded shows the custom font */
+    font-display: fallback;
+}
