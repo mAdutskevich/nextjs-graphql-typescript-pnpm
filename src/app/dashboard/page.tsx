@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import WithTheme from '@/hocs/WithTheme';
+import withTheme from '@/hocs/withTheme';
 import { CHANGE_THEME_EVENT, IS_DARK_THEME } from '@/constants/constants';
 import { Button } from '@/components/atoms/Button';
 
@@ -25,4 +25,4 @@ const Dashboard = () => {
     );
 };
 
-export default WithTheme(Dashboard);
+export default withTheme(Dashboard);
