@@ -1,3 +1,3 @@
 export interface ITextBlock {
-    text: string;
+    text: string | undefined;
 }
