@@ -1,4 +1,5 @@
 // import localFont from 'next/font/local';
+import { AuthProvider } from '@/components/templates/AuthProvider';
 import StyledComponentsRegistry from './styledRegistry';
 // Fonts can be added in at least 3 different ways:
 // 1) via gloval.css. Easy.
@@ -38,7 +39,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             {/* <body suppressHydrationWarning={true} className={roboto.className}> */}
             <body suppressHydrationWarning={true}>
                 <StyledComponentsRegistry>
-                    {children}
+                    <AuthProvider>{children}</AuthProvider>
                 </StyledComponentsRegistry>
             </body>
         </html>

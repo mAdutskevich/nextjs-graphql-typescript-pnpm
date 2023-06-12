@@ -14,12 +14,13 @@ export const variables = {
         darkFaded2: 'rgb(145, 145, 145)',
         darkFaded1: 'rgb(200, 200, 200)',
 
-        sky: '#16a085',
-        skyLight: 'rgb(22, 180, 133)',
+        sky: 'rgb(26, 186, 154)',
+        skyLight: 'rgb(30, 212, 176)',
         textLight: 'rgba(255, 255, 255, 0.85)',
         textDark: 'rgb(33, 53, 71)',
 
         colorError: 'rgb(255, 88, 88)',
+        colorNotification: 'rgb(63,131,248)',
     },
     spacing: {
         raff: '2px',

@@ -14,7 +14,7 @@ module.exports = {
         'next/core-web-vitals', // includes eslint:recommended, eslint-plugin-react, eslint-plugin-react-hooks, eslint-plugin-next
         'plugin:@typescript-eslint/eslint-recommended',
         'plugin:@typescript-eslint/recommended',
-        'prettier',
+        'plugin:prettier/recommended', // show prettier errors as ESLint errors
     ],
     rules: {
         'no-console': ['error', { allow: ['warn', 'error', 'info', 'group', 'groupEnd', 'trace'] }],

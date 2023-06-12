@@ -1,6 +1,8 @@
 import { createGlobalStyle } from 'styled-components';
+import { normalize } from 'styled-normalize';
 
 export const GlobalStyle = createGlobalStyle`
+    ${normalize}
     * {
         box-sizing: border-box;
         padding: 0;
@@ -16,8 +18,8 @@ export const GlobalStyle = createGlobalStyle`
     body {
         font-family: 'Roboto', sans-serif;
         font-weight: 400;
-        background-color: ${({ theme }) => theme.bodyColor};
-        color: ${({ theme }) => theme.textColor};
+        background-color: ${({ theme }) => theme.bg.primary};
+        color: ${({ theme }) => theme.text.secondary};
     }
 
     a {
