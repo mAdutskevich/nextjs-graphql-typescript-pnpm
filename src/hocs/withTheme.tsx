@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
@@ -11,7 +11,8 @@ import { CHANGE_THEME_EVENT, IS_DARK_THEME } from '@/constants/constants';
 const withTheme = <P extends object>(WrappedComponent: React.ComponentType<P>) =>
     function WithTheme(props: P) {
         const getThemeValue = () => {
-            const isDarkTheme = typeof window !== 'undefined' ? localStorage.getItem(IS_DARK_THEME) : null;
+            const isDarkTheme =
+                typeof window !== 'undefined' ? localStorage.getItem(IS_DARK_THEME) : null;
             return isDarkTheme && JSON.parse(isDarkTheme) ? darkTheme : lightTheme;
         };
 

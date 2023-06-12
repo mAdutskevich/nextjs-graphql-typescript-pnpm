@@ -1,43 +1,19 @@
+'use client';
+
 import React from 'react';
 import { ButtonType } from '@/enums/ButtonType';
-import { ButtonDesignType } from '@/enums/ButtonDesignType';
-import { StyledButton } from './StyledButton';
-// import classNames from 'classnames';
-// import classes from './Button.module.scss';
+import { IButtonProps } from './types';
+import { StyledButton } from './styledComponents';
 
-interface IProps {
-    label: string;
-    onClick?: () => void;
-    type?: ButtonType.BUTTON | ButtonType.SUBMIT | ButtonType.RESET;
-    leftIcon?: React.ReactNode;
-    rightIcon?: React.ReactNode;
-    designType?:
-        | ButtonDesignType.SECONDARY
-        | ButtonDesignType.WARNING
-        | ButtonDesignType.NOTIFICATION;
-    isFullWidth?: boolean;
-    isWithoutBorder?: boolean;
-    className?: string;
-}
-
-// const StyledButton = styled.button<{ $primary?: boolean; }>`
-
-// `;
-
-// const Input = styled.input<{ $inputColor?: string; }>`
-//   padding: 0.5em;
-//   margin: 0.5em;
-//   color: ${props => props.$inputColor || "#BF4F74"};
-//   background: papayawhip;
-//   border: none;
-//   border-radius: 3px;
-// `;
-
-export const Button: React.FC<IProps> = (props) => {
-    // console.log('button');
+export const Button: React.FC<IButtonProps> = (props) => {
     return (
         <StyledButton
             type={props.type || ButtonType.BUTTON}
+            $designType={props.$designType}
+            $isWithoutBorder={props.$isWithoutBorder}
+            $isFullWidth={props.$isFullWidth}
+            $size={props.$size}
+            $style={props.$style}
             // className={classNames(classes.button, props.className, {
             //     [classes.fullWidth]: props.isFullWidth,
             //     [classes.withoutBorder]: props.isWithoutBorder,

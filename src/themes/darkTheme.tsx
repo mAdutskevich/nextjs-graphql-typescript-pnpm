@@ -1,14 +1,18 @@
-import { DefaultTheme } from 'styled-components';
-// import { ITheme } from '@/interfaces/ITheme';
+import { ITheme } from '@/interfaces/ITheme';
 import { variables } from './variables';
 
-export const darkTheme: DefaultTheme = {
+export const darkTheme: ITheme = {
     name: 'dark',
     bg: {
         primary: variables.colors.dark,
         secondary: variables.colors.darkFaded4,
         // notification: variables.colors.
         // warning: variables.colors.
+    },
+    text: {
+        primary: variables.colors.sky,
+        secondary: variables.colors.light,
+        tertiary: variables.colors.lightFaded4,
     },
     button: {
         primary: {
@@ -20,9 +24,14 @@ export const darkTheme: DefaultTheme = {
         secondary: {
             color: variables.colors.light,
             bg: variables.colors.darkFaded3,
-            border: variables.colors.darkFaded1,
-            hoverBg: variables.colors.lightFaded1,
+            border: variables.colors.darkFaded2,
+            hoverBg: variables.colors.darkFaded2,
         },
-        // notification: {}
+        notification: {
+            color: variables.colors.white,
+            bg: variables.colors.colorNotification,
+            border: variables.colors.colorNotification,
+            hoverBg: 'transparent',
+        },
     },
 };

@@ -20,10 +20,7 @@ interface IProps {
 
 export const Button: React.FC<IProps> = (props) => {
     return (
-        <StyledButton
-            type={props.type || ButtonType.BUTTON}
-            onClick={props.onClick}
-        >
+        <StyledButton type={props.type || ButtonType.BUTTON} onClick={props.onClick}>
             {props.leftIcon}
             {props.label}
             {props.rightIcon}
