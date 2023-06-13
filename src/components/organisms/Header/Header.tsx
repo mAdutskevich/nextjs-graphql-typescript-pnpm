@@ -42,13 +42,13 @@ export const Header: React.FC = () => {
                 </StyledHeaderContainer>
                 <StyledHeaderContainer>
                     <Button
-                        label="Test Button"
+                        title="Test Button"
                         $designType={ButtonDesignType.SECONDARY}
                         $isWithoutBorder
                         onClick={handleClick}
                         $style="margin-right: 10px;"
                     />
-                    <Button label={session ? 'Sign Out' : 'Sign In'} onClick={handleSignIn} />
+                    <Button title={session ? 'Sign Out' : 'Sign In'} onClick={handleSignIn} />
                 </StyledHeaderContainer>
             </StyledHeader>
         </NoSSR>

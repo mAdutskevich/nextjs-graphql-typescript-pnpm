@@ -3,7 +3,7 @@ import { ButtonDesignType } from '@/enums/ButtonDesignType';
 import { ElementSize } from '@/enums/ElementSize';
 
 export interface IButtonProps {
-    label: string;
+    title: string;
     onClick?: () => void;
     // type?: ButtonType.BUTTON | ButtonType.SUBMIT | ButtonType.RESET;
     // type?: keyof typeof ButtonType;
