@@ -33,7 +33,7 @@ export const Button: React.FC<IButtonProps> = (props) => {
                 >
                     {props.label}
                 </p> */}
-            {props.label}
+            {props.title}
             {props.rightIcon}
             {/* </div> */}
         </StyledButton>

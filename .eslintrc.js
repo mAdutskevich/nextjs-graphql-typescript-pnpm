@@ -15,10 +15,21 @@ module.exports = {
         'plugin:@typescript-eslint/eslint-recommended',
         'plugin:@typescript-eslint/recommended',
         'plugin:prettier/recommended', // show prettier errors as ESLint errors
+        'plugin:storybook/recommended',
     ],
     rules: {
-        'no-console': ['error', { allow: ['warn', 'error', 'info', 'group', 'groupEnd', 'trace'] }],
+        'no-console': [
+            'error',
+            {
+                allow: ['warn', 'error', 'info', 'group', 'groupEnd', 'trace'],
+            },
+        ],
         'spaced-comment': ['error', 'always'],
-        'import/newline-after-import': ['error', { count: 1 }],
+        'import/newline-after-import': [
+            'error',
+            {
+                count: 1,
+            },
+        ],
     },
 };
